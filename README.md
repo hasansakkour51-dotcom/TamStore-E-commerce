@@ -1,6 +1,6 @@
 # TamStore 🛒
 
-[View TamStore Website](https://cool-lokum-01f144.netlify.app/)
+[View TamStore Website](https://nimble-cranachan-1e97e3.netlify.app/)
 
 ## 📖 Overview
 The **TamStore** is a modern e‑commerce web application built with **React**. It integrates **API services**, global state management using  **Zustand** , **Clean Architecture**, and provides a smooth user experience with **Framer Motion animations**. The app includes authentication, protected routes, wishlist management, and full CRUD functionality in the Profile page.
