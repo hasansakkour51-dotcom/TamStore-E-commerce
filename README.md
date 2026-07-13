@@ -3,7 +3,7 @@
 [View TamStore Website](https://whimsical-sfogliatella-ecf43b.netlify.app/)
 
 ## 📖 Overview
-The **TamStore** is a modern e‑commerce web application built with **React**. It integrates **API services**, global state management using **Zustand**, and provides a smooth user experience with **Framer Motion animations**. The app includes authentication, protected routes, wishlist management, and full CRUD functionality in the Profile page.
+The **TamStore** is a modern e‑commerce web application built with **React**. It integrates **API services**, global state management using **Zustand**,**Clean Architecture**, and provides a smooth user experience with **Framer Motion animations**. The app includes authentication, protected routes, wishlist management, and full CRUD functionality in the Profile page.
 
 ---
 
@@ -29,13 +29,13 @@ The **TamStore** is a modern e‑commerce web application built with **React**. 
 - **Context API** (Wishlist, Theme)  
 - **Error Boundaries** (robust error handling)  
 - **API Integration** (products, auth, profile CRUD)  
-
+- **Clean Architecture**
 ---
 
 
 #Customization
 API Endpoints: Update API URLs in service files to match your backend.
-
+**Clean Architecture**
 
 Theme: Modify ThemeContext for custom colors and styles.
 
