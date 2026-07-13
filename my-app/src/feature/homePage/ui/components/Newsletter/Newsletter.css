@@ -1,0 +1,109 @@
+.newsletterSection {
+  background: var(--newsletter-bg);
+  padding: 3rem 0;
+  border-top: 1px solid var(--card-border);
+  font-family: "Inter", sans-serif;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.newsletterTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--card-border);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.newsletterSubtitle {
+  font-size: 1rem;
+  color: var(--muted-text);
+  max-width: 480px;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Form */
+.newsletterForm {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  animation: slideUp 1s ease-out;
+}
+
+.newsletterInput {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  background: var(--card-bg);
+  color: var(--text);
+}
+
+.newsletterInput:focus {
+  border-color: var(--btn-bg);
+  box-shadow: 0 0 0 2px var(--focus-shadow);
+}
+
+/* Button */
+.newsletterBtn {
+  padding: 12px 20px;
+  background: var(--btn-gradient);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.newsletterBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px var(--shadow-color);
+}
+
+/* Loading Spinner */
+.newsletterBtn.loading::after {
+  content: "";
+  border: 2px solid var(--btn-text);
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  margin-left: 8px;
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .newsletterForm {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .newsletterBtn { width: 100%; }
+}

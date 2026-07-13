@@ -1,0 +1,188 @@
+.ProductListView {
+  display: flex;
+  align-items: center;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.6s ease;
+  font-family: Inter, sans-serif;
+}
+
+.ProductListView:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.listImgWrapper {
+  position: relative;
+}
+
+.listImg {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+
+.discountBadge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: linear-gradient(135deg, #ff4d4d, #b30000);
+  color: var(--btn-text);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.listContent {
+  flex: 1;
+  position: relative;
+}
+
+.listTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.listPrice {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--btn-bg);
+}
+
+.listRating {
+  font-size: 0.9rem;
+  color: var(--rating-color);
+  margin: 0.4rem 0;
+  font-weight: 600;
+}
+
+.listShipping {
+  font-size: 0.85rem;
+  color: var(--muted-text);
+}
+
+/* Actions */
+.listActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 0.8rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.35s ease;
+}
+
+.ProductListView:hover .listActions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.addToCartBtn,
+.wishlistBtn,
+.compareBtn,
+.quickViewBtn {
+  flex: 1;
+  color: var(--btn-text);
+  padding: 8px 0;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: Inter, sans-serif;
+}
+
+.addToCartBtn {
+  background: var(--btn-gradient);
+}
+
+.wishlistBtn {
+  background: linear-gradient(135deg, var(--wishlist-color), #b30000);
+}
+
+.compareBtn {
+  background: linear-gradient(135deg, #6c757d, #343a40);
+}
+
+.quickViewBtn {
+  background: linear-gradient(135deg, #6f42c1, #4b0082);
+}
+
+.addToCartBtn:hover,
+.wishlistBtn:hover,
+.compareBtn:hover,
+.quickViewBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px var(--shadow-color);
+}
+
+/* Skeleton */
+.skeleton {
+  display: flex;
+  align-items: center;
+  background: var(--card-border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skeleton-img {
+  width: 120px;
+  height: 120px;
+  background: var(--hover-border);
+  border-radius: 8px;
+  margin-right: 1rem;
+}
+
+.skeleton-line {
+  height: 12px;
+  background: var(--hover-border);
+  border-radius: 6px;
+  margin: 6px 0;
+}
+
+.skeleton-line.short { width: 60%; }
+.skeleton-line.long { width: 90%; }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ProductListView {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .listImg {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+
+  .listActions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .addToCartBtn,
+  .wishlistBtn,
+  .compareBtn,
+  .quickViewBtn {
+    width: 100%;
+  }
+}

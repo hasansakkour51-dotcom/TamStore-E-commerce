@@ -1,0 +1,231 @@
+.productsSection {
+  padding: 2rem 0;
+  background: var(--section-bg);
+  font-family: Inter, sans-serif;
+}
+
+/* Header */
+.productsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.productsTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.headerControls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* View Toggle */
+.viewToggle button {
+  margin-left: 5px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: var(--card-border);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: Inter, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+}
+
+.viewToggle button.active {
+  background: var(--btn-gradient);
+  color: var(--btn-text);
+  font-weight: 600;
+}
+
+.viewToggle button:hover {
+  transform: scale(1.05);
+}
+
+/* Sort Options */
+.sortOptions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sortOptions label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+}
+
+.sortOptions select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  transition: background 0.4s ease, border-color 0.3s ease;
+  font-family: Inter, sans-serif;
+  color: var(--text);
+}
+
+.sortOptions select:hover {
+  background: var(--hover-bg);
+}
+
+.sortOptions select:focus {
+  border-color: var(--btn-bg);
+  background: var(--hover-bg);
+  outline: none;
+}
+
+/* Sidebar Filters */
+.sidebarFilters {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+  animation: slideInLeft 0.6s ease;
+}
+
+.sidebarFilters h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--btn-bg);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filterGroup {
+  margin-bottom: 1.2rem;
+}
+
+.filterGroup label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+}
+
+.filterGroup select,
+.filterGroup input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  transition: background 0.4s ease, border-color 0.3s ease;
+  font-family: Inter, sans-serif;
+  color: var(--text);
+}
+
+.filterGroup select:hover,
+.filterGroup input:hover {
+  background: var(--hover-bg);
+}
+
+.filterGroup select:focus,
+.filterGroup input:focus {
+  border-color: var(--btn-bg);
+  background: var(--hover-bg);
+  outline: none;
+}
+
+/* Reset Button */
+.resetBtn {
+  width: 100%;
+  padding: 10px;
+  background: var(--btn-gradient);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-family: Inter, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.resetBtn:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ========================= */
+/* 📱 Responsive Media Queries */
+/* ========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .productsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sidebarFilters {
+    position: relative;
+    top: auto;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  .sortOptions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .productsTitle {
+    font-size: 1.3rem;
+  }
+
+  .viewToggle button,
+  .sortOptions select,
+  .resetBtn {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .productsHeader {
+    gap: 0.8rem;
+  }
+
+  .sidebarFilters {
+    padding: 1rem;
+  }
+
+  .filterGroup label {
+    font-size: 0.85rem;
+  }
+}

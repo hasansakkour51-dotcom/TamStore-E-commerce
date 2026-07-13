@@ -1,0 +1,75 @@
+.profileSection {
+  padding: 2rem 0;
+  font-family: Inter, sans-serif;
+}
+
+.profileCard {
+  border: none;
+  box-shadow: 0 6px 18px var(--shadow-color);
+  border-radius: 12px;
+}
+
+.profileImageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileImage {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid var(--btn-bg);
+  margin-bottom: 10px;
+}
+
+.uploadInput {
+  margin-top: 10px;
+}
+
+.logoutBtn {
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.wishlistSection h3 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--card-border);
+  padding-bottom: 0.5rem;
+
+}
+
+.wishlistItem {
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.wishlistItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px var(--shadow-color);
+}
+
+.wishlistImg {
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.blurBackdrop {
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profileCard {
+    margin-bottom: 2rem;
+  }
+  .wishlistImg {
+    height: 150px;
+  }
+}

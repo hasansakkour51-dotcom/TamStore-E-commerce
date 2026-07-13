@@ -1,0 +1,176 @@
+.HeroSection {
+  min-height: 70vh; /* بدل max-height لضمان طول ثابت */
+  padding-block: 20px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+/* Sidebar Categories */
+.sideBarCategories {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 15px;
+  height: 100%;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.categoriesList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categoryItem {
+  display: flex;
+  align-items: center;
+}
+
+.iconBullet {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.category-link {
+  text-decoration: none;
+  color: var(--muted-text);
+  font: 400 1rem "Inter", sans-serif;
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.category-link:hover {
+  background: var(--hover-bg);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px var(--focus-shadow);
+}
+
+.category-link.active {
+  background: var(--btn-gradient);
+  color: var(--btn-text);
+  font-weight: 600;
+}
+
+/* Banner */
+.banner {
+  min-height: 55vh;
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* يخلي المحتوى بالوسط */
+  gap: 20px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 20px var(--shadow-color);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.banner h3 {
+  color: var(--text);
+  font: 400 2rem "Inter", sans-serif;
+}
+
+.banner h3 span {
+  font: 700 2.3rem "Inter", sans-serif;
+  color: var(--btn-bg);
+}
+
+/* Learn More button */
+.learnMore {
+  text-decoration: none;
+  padding: 12px 20px;
+  background: var(--btn-gradient);
+  border-radius: 8px;
+  font: 500 1rem "Inter", sans-serif;
+  color: var(--btn-text);
+  box-shadow: 0 4px 12px var(--shadow-color);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.learnMore:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px var(--shadow-color);
+}
+
+/* Right Side User Boxes */
+.leftSideBanner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.userBox {
+  background: var(--userbox-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.userBox h2 {
+  font: 400 1rem "Inter", sans-serif;
+  color: var(--text);
+}
+
+.icon-circle {
+  background: var(--btn-bg);
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Orange + Cyan boxes */
+.userInfo {
+  background: var(--info-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--btn-text);
+  font: 400 1rem "Inter", sans-serif;
+}
+
+.userPromo {
+  background: var(--promo-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  color: var(--btn-text);
+  font: 400 1rem "Inter", sans-serif;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .HeroSection { min-height: 60vh; }
+  .sideBarCategories { margin-bottom: 20px; }
+  .banner { min-height: 40vh; padding: 30px; }
+  .leftSideBanner { margin-top: 20px; }
+}
+
+@media (max-width: 768px) {
+  .HeroSection { min-height: 50vh; padding-block: 10px; }
+  .banner { min-height: 35vh; padding: 20px; }
+  .banner h3 { font-size: 1.5rem; }
+  .banner h3 span { font-size: 1.8rem;}
+}
+
+@media (max-width: 480px) {
+  .HeroSection { min-height: 45vh; }
+  .banner { min-height: 30vh; }
+  .banner h3 { font-size: 1.3rem; }
+  .banner h3 span { font-size: 1.5rem; }
+  .learnMore { font-size: 0.85rem; }
+}

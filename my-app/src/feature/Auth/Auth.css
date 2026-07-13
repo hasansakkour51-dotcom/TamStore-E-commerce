@@ -1,0 +1,81 @@
+.authPage {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0d6efd, #004085);
+    font-family: "Inter", sans-serif;
+  }
+  
+  .authBox {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 0.6s ease;
+  }
+  
+  .authBox h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #0d6efd;
+  }
+  
+  .authBox form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .authBox input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+  }
+  
+  .authBox input:focus {
+    border-color: #0d6efd;
+    outline: none;
+  }
+  
+  .authBox button {
+    background: linear-gradient(135deg, #0d6efd, #004085);
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+  }
+  
+  .authBox button:hover {
+    transform: translateY(-2px);
+  }
+  
+  .authBox p {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .switchLink {
+    color: #0d6efd;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .switchLink:hover {
+    text-decoration: underline;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

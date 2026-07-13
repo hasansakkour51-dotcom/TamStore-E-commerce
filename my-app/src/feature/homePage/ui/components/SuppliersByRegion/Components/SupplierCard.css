@@ -1,0 +1,74 @@
+.supplierCard {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid var(--card-border);
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  cursor: pointer;
+  animation: fadeInUp 0.6s ease-out;
+  font-family: "Inter", sans-serif;
+}
+
+.supplierCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+/* Flag */
+.supplierFlag {
+  width: 70px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  border: 2px solid var(--card-border);
+  transition: transform 0.3s ease;
+}
+
+.supplierCard:hover .supplierFlag {
+  transform: scale(1.08);
+}
+
+/* Country */
+.supplierCountry {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+/* Link Button */
+.supplierLink {
+  display: inline-block;
+  background: var(--btn-gradient);
+  color: var(--btn-text);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.supplierLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px var(--shadow-color);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .supplierCard {
+    padding: 1rem;
+  }
+  .supplierFlag { width: 60px; height: 40px; }
+  .supplierCountry { font-size: 1rem; }
+  .supplierLink { font-size: 0.8rem; padding: 7px 14px; }
+}

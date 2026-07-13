@@ -1,0 +1,137 @@
+.footerSection {
+  background: var(--footer-bg);
+  backdrop-filter: blur(12px);
+  padding: 3rem 0 1rem;
+  border-top: 3px solid transparent;
+  border-image: var(--footer-border-gradient) 1;
+  animation: footerFadeIn 0.8s ease-out;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Wave SVG */
+.footerSection::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: var(--footer-wave);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes footerFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Logo */
+.footerLogo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--btn-bg);
+  margin-bottom: 1rem;
+}
+
+/* Social Icons */
+.socialIcons {
+  display: flex;
+  gap: 12px;
+}
+
+.socialIcons a {
+  font-size: 1.2rem;
+  color: var(--icon-color);
+  background: var(--social-bg);
+  border-radius: 50%;
+  padding: 10px;
+  transition: transform 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: var(--btn-text);
+  background: var(--btn-gradient);
+  transform: scale(1.15);
+  box-shadow: 0 6px 18px var(--shadow-color);
+}
+
+/* Links */
+.footerCol ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerCol ul li {
+  margin-bottom: 8px;
+}
+
+.footerCol ul li a {
+  color: var(--muted-text);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.footerCol ul li a:hover {
+  color: var(--btn-bg);
+  border-bottom: 1px solid var(--btn-bg);
+}
+
+/* App Buttons */
+.appBtn {
+  display: inline-block;
+  padding: 12px;
+  background: var(--btn-gradient);
+  color: var(--btn-text);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appBtn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px var(--shadow-color);
+}
+
+/* Language Selector */
+.langSelect {
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  background: var(--card-bg);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.langSelect:hover {
+  background: var(--hover-bg);
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footerSection {
+    padding: 2rem 0 0.5rem;
+  }
+
+  .footerCol {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+
+  .appBtn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

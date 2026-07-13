@@ -1,0 +1,167 @@
+.recommendedSection {
+  margin-top: 2rem;
+  font-family: "Inter", sans-serif;
+}
+
+.recommendedTitle {
+  font: 700 1.6rem "Inter", sans-serif;
+  color: #1c1c1c;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 0.5rem;
+}
+
+/* Swiper */
+.swiper {
+  padding-bottom: 2rem;
+}
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* CARD BASE */
+.recommendedCard {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.recommendedCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* IMAGE */
+.recommendedCard img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.recommendedCard:hover img {
+  transform: scale(1.07);
+}
+
+/* TITLE */
+.recTitle {
+  font: 500 0.9rem "Inter", sans-serif;
+  color: #1c1c1c;
+  line-height: 1.2;
+}
+
+/* PRICE + DISCOUNT */
+.recPrice {
+  font: 700 1rem "Inter", sans-serif;
+  color: #0d6efd;
+}
+
+.recDiscount {
+  background: #ffe3e3;
+  color: #d20000;
+  font: 700 0.8rem "Inter", sans-serif;
+  padding: 3px 8px;
+  border-radius: 8px;
+  margin-left: 6px;
+  box-shadow: 0 4px 10px rgba(210,0,0,0.15);
+  transition: transform 0.25s ease;
+}
+
+.recommendedCard:hover .recDiscount {
+  transform: scale(1.08);
+}
+
+/* RATING */
+.recRating {
+  font-size: 0.85rem;
+  color: #ff9800;
+}
+
+/* ADD TO CART BUTTON */
+.addToCartBtn {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  width: 85%;
+  background: linear-gradient(135deg, #0d6efd, #004085);
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  opacity: 0;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.35s cubic-bezier(0.25, 0.1, 0.25, 1.2);
+}
+
+.recommendedCard:hover .addToCartBtn {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.addToCartBtn:hover {
+  transform: scale(1.08);
+}
+
+/* VIEW MORE BUTTON */
+.viewMoreWrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.viewMoreBtn {
+  background: linear-gradient(135deg, #0d6efd, #004085);
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+.viewMoreBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .recommendedCard { min-height: 200px; padding: 10px; }
+  .recommendedCard img { width: 95px; height: 95px; }
+}
+
+@media (max-width: 768px) {
+  .recommendedCard { min-height: 180px; padding: 8px; }
+  .recommendedCard img { width: 80px; height: 80px; }
+  .recTitle { font-size: 0.85rem; }
+  .recPrice { font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+  .recommendedCard img { width: 70px; height: 70px; }
+  .recTitle { font-size: 0.8rem; }
+  .recPrice { font-size: 0.85rem; }
+}

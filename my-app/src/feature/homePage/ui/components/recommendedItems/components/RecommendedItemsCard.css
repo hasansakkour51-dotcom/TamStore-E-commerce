@@ -1,0 +1,194 @@
+.RecommendedItemsCard {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  animation: cardFadeIn 0.4s ease-out;
+  font-family: "Inter", sans-serif;
+}
+
+.RecommendedItemsCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+/* TOP ACTIONS */
+.recTopActions {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 2;
+}
+
+/* 🔥 أزرار أصغر وأنعم */
+.iconBtn {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: none;
+  background: var(--card-bg);
+  box-shadow: 0 1px 4px var(--shadow-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.70rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(4px);
+}
+
+/* تأثير hover أنعم */
+.iconBtn:hover {
+  background: var(--hover-bg);
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* ألوان محسّنة */
+.wishlistBtn { color: var(--wishlist-color); }
+.quickViewBtn { color: var(--icon-color); }
+.compareBtn { color: var(--btn-bg); }
+
+/* IMAGE */
+.recImgBox img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.RecommendedItemsCard:hover img {
+  transform: scale(1.07);
+}
+
+/* TITLE */
+.recItemTitle {
+  font: 500 0.9rem "Inter", sans-serif;
+  color: var(--text);
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* PRICE + DISCOUNT */
+.recPriceRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.recItemPrice {
+  font: 700 1rem "Inter", sans-serif;
+  color: var(--btn-bg);
+}
+
+.recItemDiscount {
+  background: var(--discount-bg);
+  color: var(--discount-text);
+  font: 700 0.8rem "Inter", sans-serif;
+  padding: 3px 8px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px var(--discount-shadow);
+  transition: transform 0.25s ease;
+}
+
+.RecommendedItemsCard:hover .recItemDiscount {
+  transform: scale(1.08);
+}
+
+/* RATING */
+.recItemRating {
+  font-size: 0.9rem;
+  color: var(--rating-color);
+}
+
+/* ADD TO CART BUTTON */
+.addToCartBtn {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  width: 85%;
+  background: var(--btn-gradient);
+  color: var(--btn-text);
+  border: none;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  opacity: 0;
+  box-shadow: 0px 4px 12px var(--shadow-color);
+  transition: all 0.35s cubic-bezier(0.25, 0.1, 0.25, 1.2);
+}
+
+.RecommendedItemsCard:hover .addToCartBtn {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.addToCartBtn:hover {
+  transform: scale(1.08);
+}
+
+/* ANIMATION */
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* SKELETON */
+.RecommendedItemsCard.skeleton {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 12px;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  overflow: hidden;
+  animation: skeletonFade 0.3s ease-out;
+}
+
+.skeleton-box,
+.skeleton-line {
+  background: var(--skeleton-bg);
+  background-size: 200% 100%;
+  animation: skeletonLoading 1.2s infinite;
+  border-radius: 8px;
+}
+
+@keyframes skeletonLoading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@keyframes skeletonFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .RecommendedItemsCard { min-height: 220px; }
+  .recImgBox img { width: 90px; height: 90px; }
+}

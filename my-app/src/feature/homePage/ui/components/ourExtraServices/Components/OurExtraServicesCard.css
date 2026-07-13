@@ -1,0 +1,82 @@
+.ExtraServiceCard {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeInUp 0.6s ease-out;
+  font-family: "Inter", sans-serif;
+}
+
+.ExtraServiceCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px var(--shadow-color);
+}
+
+/* IMAGE */
+.serviceImgBox {
+  position: relative;
+}
+
+.serviceImgBox img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.ExtraServiceCard:hover .serviceImgBox img {
+  transform: scale(1.05);
+}
+
+/* Overlay Icon */
+.serviceImgBox::after {
+  content: "⚙️";
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* TITLE */
+.serviceTitle {
+  font: 700 1.1rem "Inter", sans-serif;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+.ExtraServiceCard:hover .serviceTitle {
+  color: var(--btn-bg);
+}
+
+/* DESCRIPTION */
+.serviceDesc {
+  font: 400 0.9rem "Inter", sans-serif;
+  color: var(--muted-text);
+  line-height: 1.4;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ExtraServiceCard {
+    min-height: 220px;
+    padding: 15px;
+  }
+  .serviceImgBox img { height: 120px; }
+  .serviceTitle { font-size: 1rem; }
+  .serviceDesc { font-size: 0.85rem; }
+}

@@ -1,0 +1,111 @@
+.header {
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--card-border);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding-block: 15px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Logo */
+header img {
+  max-width: 130px;
+  transition: transform 0.3s ease;
+}
+header img:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation */
+.headerList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.headerList li a {
+  text-decoration: none;
+  color: var(--muted-text);
+  font: 400 0.9rem 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.headerList li a:hover {
+  color: var(--btn-bg);
+  transform: translateY(-3px);
+}
+
+/* Cart Badge */
+.cartBadge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 50%;
+  padding: 2px 6px;
+}
+
+/* Search Toggle Button (Mobile) */
+.searchToggleBtn {
+  background: none;
+  border: none;
+  color: var(--muted-text);
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.searchToggleBtn:hover {
+  color: var(--btn-bg);
+  transform: scale(1.1);
+}
+
+/* Theme Toggle */
+.themeToggleBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.themeToggleBtn:hover {
+  transform: scale(1.2);
+  color: var(--btn-bg);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  header img { max-width: 110px; }
+  .header nav ul { gap: 1rem; }
+}
+
+@media (max-width: 768px) {
+  header img {
+    max-width: 95px;
+    margin: 0 auto;
+    display: block;
+  }
+  .header nav ul {
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .headerList li a { font-size: 0.8rem; }
+}
+
+@media (max-width: 480px) {
+  header img { max-width: 80px; }
+  .header nav ul {
+    gap: 0.6rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .headerList li a { font-size: 0.7rem; }
+  .headerList li a svg { width: 18px; height: 18px; }
+}

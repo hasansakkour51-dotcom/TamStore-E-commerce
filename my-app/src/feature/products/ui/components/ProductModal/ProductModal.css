@@ -1,0 +1,85 @@
+.modalContent {
+  display: flex;
+  gap: 1rem;
+}
+
+.modalImg {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  background: var(--card-bg);
+}
+
+.modalDetails {
+  flex: 1;
+}
+
+.modalPrice {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--btn-bg);
+}
+
+.modalRating {
+  font-size: 1rem;
+  color: var(--rating-color);
+  margin: 0.5rem 0;
+}
+
+.modalDesc {
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  line-height: 1.4;
+}
+
+.modalActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.modalActions button {
+  flex: 1;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--btn-gradient);
+  color: var(--btn-text);
+  border: none;
+  cursor: pointer;
+}
+
+.modalActions button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px var(--shadow-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modalContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modalImg {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .modalActions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .modalActions button {
+    width: 100%;
+  }
+}

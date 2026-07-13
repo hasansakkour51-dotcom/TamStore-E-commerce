@@ -1,0 +1,153 @@
+:root {
+    /* الأساسيات */
+    --bg: #ffffff;
+    --text: #1c1c1c;
+    --muted-text: #666;
+  
+    /* الكروت */
+    --card-bg: #ffffff;
+    --card-border: #e6e6e6;
+    --hover-border: #cfcfcf;
+  
+    /* الأزرار */
+    --btn-bg: #0d6efd;
+    --btn-text: #ffffff;
+    --btn-gradient: linear-gradient(135deg, #0d6efd, #004085);
+  
+    /* الأيقونات */
+    --wishlist-color: #ff3b3b;
+    --icon-color: #444;
+  
+    /* الخصومات */
+    --discount-bg: #ffe3e3;
+    --discount-text: #d20000;
+    --discount-shadow: rgba(210,0,0,0.15);
+  
+    /* التقييم */
+    --rating-color: #ff9800;
+  
+    /* الشادو */
+    --shadow-color: rgba(0,0,0,0.08);
+  
+    /* سكيليتون */
+    --skeleton-bg: linear-gradient(90deg, #e3e3e3 0%, #f2f2f2 50%, #e3e3e3 100%);
+  
+    /* البانرات */
+    --banner-text: #ffffff;
+  
+    /* أقسام */
+    --section-bg: #f8f9fa;
+  
+    /* Quote Section */
+    --quote-overlay: linear-gradient(135deg, rgba(13,110,253,0.65), rgba(0,60,130,0.75));
+    --focus-shadow: rgba(13,110,253,0.15);
+  
+    /* Hero Section */
+    --hover-bg: #eef6ff;
+    --userbox-bg: #e0f4ff;
+    --info-bg: #f38332;
+    --promo-bg: #55bdc3;
+  
+    /* Footer */
+    --footer-bg: linear-gradient(135deg, #ffffff, #f8f9fa);
+    --footer-border-gradient: linear-gradient(90deg, #0d6efd, #004085);
+    --footer-wave: url("data:image/svg+xml;utf8,<svg ... ></svg>");
+    --social-bg: rgba(13,110,253,0.08);
+  
+    /* Newsletter */
+    --newsletter-bg: linear-gradient(135deg, #f8f9fa, #ffffff);
+  
+    /* CartPage */
+    --cart-text: #333;
+    --cart-bg: #fff;
+    --cart-border: #ccc;
+    --cart-summary-bg: #f8f9fa;
+  
+    /* Profile */
+    --profile-border: #ddd;
+  
+    /* Modal */
+    --modal-bg: #fff;
+  }
+  
+  [data-theme="dark"] {
+    /* الأساسيات */
+    --bg: #0f0f0f;
+    --text: #f5f5f5;   /* النصوص تتحول لأبيض */
+    --muted-text: #aaa;
+  
+    /* الكروت */
+    --card-bg: #1a1a1a;
+    --card-border: #333;
+    --hover-border: #555;
+  
+    /* الأزرار */
+    --btn-bg: #1a73e8;
+    --btn-text: #ffffff;
+    --btn-gradient: linear-gradient(135deg, #1a73e8, #004085);
+  
+    /* الأيقونات */
+    --wishlist-color: #ff6b6b;
+    --icon-color: #ccc;
+  
+    /* الخصومات */
+    --discount-bg: #3a1a1a;
+    --discount-text: #ffaaaa;
+    --discount-shadow: rgba(255,0,0,0.25);
+  
+    /* التقييم */
+    --rating-color: #ffc107;
+  
+    /* الشادو */
+    --shadow-color: rgba(0,0,0,0.5);
+  
+    /* سكيليتون */
+    --skeleton-bg: linear-gradient(90deg, #333 0%, #444 50%, #333 100%);
+  
+    /* البانرات */
+    --banner-text: #f5f5f5;
+  
+    /* أقسام */
+    --section-bg: #1a1a1a;
+  
+    /* Quote Section */
+    --quote-overlay: linear-gradient(135deg, rgba(26,115,232,0.65), rgba(0,40,90,0.75));
+    --focus-shadow: rgba(26,115,232,0.25);
+  
+    /* Hero Section */
+    --hover-bg: #222;
+    --userbox-bg: #2a3a3f;
+    --info-bg: #b85c2a;
+    --promo-bg: #2a7d80;
+  
+    /* Footer */
+    --footer-bg: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    --footer-border-gradient: linear-gradient(90deg, #1a73e8, #004085);
+    --footer-wave: url("data:image/svg+xml;utf8,<svg ... ></svg>");
+    --social-bg: rgba(26,115,232,0.08);
+  
+    /* Newsletter */
+    --newsletter-bg: linear-gradient(135deg, #1a1a1a, #0f0f0f);
+  
+    /* CartPage */
+    --cart-text: #f5f5f5;
+    --cart-bg: #1a1a1a;
+    --cart-border: #444;
+    --cart-summary-bg: #222;
+  
+    /* Profile */
+    --profile-border: #444;
+  
+    /* Modal */
+    --modal-bg: #1a1a1a;
+  }
+  
+  /* تطبيق المتغيرات على الـ body */
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  

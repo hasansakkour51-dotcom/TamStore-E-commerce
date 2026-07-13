@@ -1,0 +1,144 @@
+.DealsAndOffersCard {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 1px solid var(--card-border);
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Hover effect */
+.DealsAndOffersCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+/* IMAGE */
+.productImgBox img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.DealsAndOffersCard:hover img {
+  transform: scale(1.07);
+}
+
+/* TITLE */
+.productTitle {
+  color: var(--text);
+  font: 500 0.95rem "Inter", sans-serif;
+  line-height: 1.2;
+  margin-top: 6px;
+}
+
+/* DISCOUNT BADGE */
+.productDiscount {
+  background: var(--discount-bg);
+  color: var(--discount-text);
+  font: 700 0.9rem "Inter", sans-serif;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-top: 8px;
+  display: inline-block;
+  box-shadow: 0 4px 10px var(--discount-shadow);
+  transition: transform 0.25s ease;
+}
+
+.DealsAndOffersCard:hover .productDiscount {
+  transform: scale(1.08);
+}
+
+/* ADD TO CART BUTTON */
+.addToCartBtn {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  width: 85%;
+  background: var(--btn-gradient);
+  color: var(--btn-text);
+  border: none;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  opacity: 0;
+  box-shadow: 0px 4px 12px var(--shadow-color);
+  transition: all 0.35s cubic-bezier(0.25, 0.1, 0.25, 1.2);
+}
+
+.DealsAndOffersCard:hover .addToCartBtn {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.addToCartBtn:hover {
+  transform: scale(1.08);
+}
+
+/* RESPONSIVE */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .DealsAndOffersCard {
+    padding: 0.8rem;
+    min-height: 200px;
+  }
+
+  .productImgBox img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .DealsAndOffersCard {
+    padding: 0.7rem;
+    min-height: 180px;
+  }
+
+  .productImgBox img {
+    width: 85px;
+    height: 85px;
+  }
+
+  .productTitle {
+    font-size: 0.85rem;
+  }
+
+  .productDiscount {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}
+
+/* Extra small */
+@media (max-width: 480px) {
+  .productImgBox img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .productTitle {
+    font-size: 0.8rem;
+  }
+
+  .productDiscount {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,118 @@
+.dealsAndOffers {
+  margin-top: 3rem;
+  font-family: "Inter", sans-serif;
+}
+
+/* LEFT SIDE INFO */
+.dealsInfo {
+  background: var(--section-bg);
+  border: 1px solid var(--card-border);
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.dealsInfo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px var(--shadow-color);
+}
+
+.dealsTitle {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.dealsCategory {
+  color: var(--muted-text);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* TIMER BOXES */
+.timer {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.timerBox {
+  background: var(--btn-gradient);
+  color: var(--btn-text);
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  min-width: 70px;
+  text-align: center;
+  box-shadow: 0 4px 12px var(--shadow-color);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.timerBox:hover {
+  background: var(--btn-bg);
+  transform: translateY(-3px);
+}
+
+.timeNumber {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.timeLabel {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* SWIPER */
+.dealsSwiper {
+  background: var(--card-bg);
+  border-radius: 14px;
+  box-shadow: 0 10px 25px var(--shadow-color);
+  padding: 1.5rem;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pagination */
+.swiper-pagination-bullet {
+  background: var(--btn-bg);
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .dealsInfo { padding: 1.5rem; }
+  .dealsTitle { font-size: 1.4rem; }
+  .timerBox { min-width: 60px; padding: 0.6rem; }
+}
+
+@media (max-width: 768px) {
+  .dealsAndOffers { margin-top: 1.5rem; }
+  .dealsInfo { margin-bottom: 1rem; border-radius: 12px; }
+  .dealsTitle { font-size: 1.3rem; }
+  .dealsCategory { font-size: 0.9rem; }
+  .timerBox { min-width: 55px; padding: 0.5rem; }
+  .timeNumber { font-size: 1rem; }
+  .timeLabel { font-size: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .dealsInfo { padding: 1rem; }
+  .timerBox { min-width: 50px; }
+  .timeNumber { font-size: 0.9rem; }
+  .timeLabel { font-size: 0.7rem; }
+}
